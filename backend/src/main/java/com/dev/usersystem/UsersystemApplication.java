@@ -8,6 +8,6 @@ public class UsersystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UsersystemApplication.class, args);
+		System.out.println("*** Running api ***");
 	}
-
 }
