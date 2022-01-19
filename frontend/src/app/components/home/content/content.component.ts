@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from '../models/user';
 import { HomeService } from '../services/home.service';
 
 @Component({
@@ -26,5 +27,24 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  sendToSave() {}
+  sendToSave() {
+    let form = this.formToSend;
+    let data : User = {
+      nome: form.get('name')?.value,
+      telefone: form.get('phone')?.value,
+      email: form.get('email')?.value,
+    }
+    this.homeService.saveUser(data).subscribe((response: any) => {
+      console.log(response, data.nome)
+      this.resetInPut()
+    })
+  }
+
+  resetInPut() {
+    this.formToSend.patchValue({
+      name: [''],
+      phone: [''],
+      email: ['']
+    })
+  }
 }

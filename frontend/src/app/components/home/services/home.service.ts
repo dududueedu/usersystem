@@ -15,7 +15,4 @@ export class HomeService {
   saveUser(user : User){
     return this.http.post(`http://localhost:8080/users`, user).pipe(take(1))
   }
-  listUser(){
-    this.http.get(`http://localhost:8080/users`)
-  }
 }

@@ -1,6 +1,5 @@
-export type User = {
-    id: string;
-    nome: string;
-    email: string;
-    telefone: string;
+export class User {
+    nome!: string;
+    email!: string;
+    telefone!: string;
 }
