@@ -22,7 +22,8 @@
     }
     mat-card-actions {
       button {
-        background-color: #ffdc40;
+        background-color: #0000FF;
+        color: #FFFFFF;
         border-radius: 10px;
         border: none;
         font-weight: bold;
@@ -30,7 +31,7 @@
         transition: background-color 0.3s;
 
         &:hover {
-          background-color: #d8ba35;
+          background-color: #00008B;
         }
       }
     }
