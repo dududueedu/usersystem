@@ -16,10 +16,10 @@ export class ContentComponent implements OnInit {
     private homeService: HomeService
   ) {
     this.formToSend = this.formBuilder.group({
-      name: [''],
-      phone: [''],
+      name: null,
+      phone: null,
       email: [
-        '',
+        null,
         Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
       ],
     });
@@ -43,8 +43,8 @@ export class ContentComponent implements OnInit {
 
   resetInPut() {
     this.formToSend.patchValue({
-      name: [''],
-      phone: [''],
+      name: null,
+      phone: null,
       email: null
     })
   }
