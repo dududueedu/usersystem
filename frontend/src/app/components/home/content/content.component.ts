@@ -44,7 +44,7 @@ export class ContentComponent implements OnInit {
     this.formToSend.patchValue({
       name: [''],
       phone: [''],
-      email: ['']
+      email: null
     })
   }
 }
