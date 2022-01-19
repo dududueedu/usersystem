@@ -35,7 +35,8 @@ export class ContentComponent implements OnInit {
       email: form.get('email')?.value,
     }
     this.homeService.saveUser(data).subscribe((response: any) => {
-      console.log(response, data.nome)
+      console.log(response)
+      alert("Dados salvos com sucesso.")
       this.resetInPut()
     })
   }
